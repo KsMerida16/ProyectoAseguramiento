@@ -4,13 +4,13 @@ const API_URL = "https://proyectoaseguramiento-production.up.railway.app";
 
 // Obtener todos los inventarios
 export const getInventory = async () => {
-  const response = await axios.get(`${API_URL}/inventory`);
+  const response = await axios.get(`${API_URL}/inventory/`);
   return response.data;
 };
 
 // Crear inventario
 export const createInventory = async (data) => {
-  const response = await axios.post(`${API_URL}/inventory`, data);
+  const response = await axios.post(`${API_URL}/inventory/`, data);
   return response.data;
 };
 
