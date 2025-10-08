@@ -22,7 +22,7 @@ export default function UsersPage() {
   // Roles
   const [roles, setRoles] = useState([]);
   useEffect(() => {
-    axios.get(`${apiUrl}/roles`)
+    axios.get(`${apiUrl}/roles/`)
       .then(res => setRoles(res.data.filter(r => r.is_active)))
       .catch(err => console.error("Error cargando roles:", err));
   }, []);
