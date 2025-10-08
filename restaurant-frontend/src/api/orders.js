@@ -5,12 +5,12 @@ const API_URL = "https://proyectoaseguramiento-production.up.railway.app"; // Ca
 
 // Orders
 export const getOrders = async () => {
-  const res = await axios.get(`${API_URL}/orders`);
+  const res = await axios.get(`${API_URL}/orders/`);
   return res.data;
 };
 
 export const createOrder = async (orderData) => {
-  const res = await axios.post(`${API_URL}/orders`, orderData);
+  const res = await axios.post(`${API_URL}/orders/`, orderData);
   return res.data;
 };
 
@@ -31,7 +31,7 @@ export const getOrderItems = async (orderId) => {
 };
 
 export const createOrderItem = async (itemData) => {
-  const res = await axios.post(`${API_URL}/order_items`, itemData);
+  const res = await axios.post(`${API_URL}/order_items/`, itemData);
   return res.data;
 };
 
