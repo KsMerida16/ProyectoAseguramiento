@@ -13,7 +13,7 @@ export default function MenuCategoriesPage() {
 
   // Cargar categorías
   useEffect(() => {
-    axios.get(`${apiUrl}/menu_categories`).then((res) => {
+    axios.get(`${apiUrl}/menu_categories/`).then((res) => {
       setCategories(res.data.filter(c => c.is_active));
     });
   }, []);
