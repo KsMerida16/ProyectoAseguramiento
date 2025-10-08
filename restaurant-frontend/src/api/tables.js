@@ -16,7 +16,7 @@ export const createTable = async (tableData) => {
 // Actualizar estado de mesa
 export const updateTableStatus = async (id, statusData) => {
   // PATCH al endpoint correcto con solo { status }
-  const response = await axios.patch(`${API_URL}/tables/${id}/status/`, statusData);
+  const response = await axios.patch(`${API_URL}/tables/${id}/status`, statusData);
   return response.data;
 };
 
