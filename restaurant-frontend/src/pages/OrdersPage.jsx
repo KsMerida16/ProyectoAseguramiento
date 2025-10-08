@@ -24,9 +24,9 @@ export default function OrdersPOSPage() {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
-    axios.get(`${apiUrl}/tables`).then(res => setTables(res.data.filter(t => t.is_active)));
-    axios.get(`${apiUrl}/customers`).then(res => setCustomers(res.data.filter(c => c.is_active)));
-    axios.get(`${apiUrl}/menu_items`).then(res => setMenuItems(res.data.filter(m => m.is_active)));
+    axios.get(`${apiUrl}/tables/`).then(res => setTables(res.data.filter(t => t.is_active)));
+    axios.get(`${apiUrl}/customers/`).then(res => setCustomers(res.data.filter(c => c.is_active)));
+    axios.get(`${apiUrl}/menu_items/`).then(res => setMenuItems(res.data.filter(m => m.is_active)));
   }, []);
 
   // Orders
