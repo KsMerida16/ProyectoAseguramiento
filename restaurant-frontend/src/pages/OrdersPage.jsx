@@ -13,7 +13,7 @@ import {
 import axios from "axios";
 import { colors } from "../theme";
 
-const apiUrl = "https://api-restaurante-h08h.onrender.com";
+const apiUrl = "https://proyectoaseguramiento-production.up.railway.app";
 
 export default function OrdersPOSPage() {
   const queryClient = useQueryClient();
