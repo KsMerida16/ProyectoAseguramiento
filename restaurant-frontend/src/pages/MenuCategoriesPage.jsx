@@ -34,10 +34,10 @@ export default function MenuCategoriesPage() {
     if (editingCategory) {
       await axios.put(`${apiUrl}/menu_categories/${editingCategory.id}`, payload);
     } else {
-      await axios.post(`${apiUrl}/menu_categories`, payload);
+      await axios.post(`${apiUrl}/menu_categories/`, payload);
     }
 
-    const res = await axios.get(`${apiUrl}/menu_categories`);
+    const res = await axios.get(`${apiUrl}/menu_categories/`);
     setCategories(res.data.filter(c => c.is_active));
     clearForm();
   };
