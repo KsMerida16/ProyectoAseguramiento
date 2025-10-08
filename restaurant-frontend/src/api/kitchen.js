@@ -5,7 +5,7 @@ const API_URL = "https://proyectoaseguramiento-production.up.railway.app"; // Ca
 
 // Obtener órdenes relevantes para cocina
 export const getKitchenOrders = async () => {
-  const res = await axios.get(`${API_URL}/kitchen/orders`);
+  const res = await axios.get(`${API_URL}/kitchen/orders/`);
   return res.data;
 };
 
